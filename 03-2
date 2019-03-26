@@ -1,0 +1,24 @@
+package com.company;
+
+import java.util.Random;
+
+public class Main {
+
+    public static void main(String[] args) {
+        int x=1;//содержит количество повторений
+        int[] array = new int[1000];
+        for (int i = 1; i < array.length; i++) {
+            array[i]=i;
+            if (((i%13==0)|(i%17==0))&&(x<=100)){
+                x++;
+                System.out.print(array[i] + " ");
+            }
+            }
+        //int[] array = new int[100];
+        //for (int i = 0; i < array.length; i++) {
+        //array[i]=i;
+        //if ((i%13==0)|(i%17==0))
+        //System.out.print(array[i] + " ");
+        //}
+    }
+}
