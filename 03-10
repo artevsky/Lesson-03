@@ -1,0 +1,18 @@
+package com.company;
+import java.util.Scanner;
+public class Main {
+
+    public static int factorial(int s){
+        int ret = 1;
+        for (int i = 1; i <= s; ++i) ret *= i;
+        return ret;
+    }
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println ("Введите число:");
+        int s = in.nextInt();
+        in.close();
+        System.out.println(factorial(s));
+       	// write your code here
+    }
+}
