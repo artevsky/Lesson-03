@@ -1,0 +1,18 @@
+package com.company;
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println ("Введите число:");
+        int s = in.nextInt();
+        in.close();
+        if (((s==1)|(s==2)|(s==3)|(s==5)|(s==7))||((s>0)&(s%2!=0)&(s%3!=0)&(s%4!=0)&(s%5!=0))) {
+            System.out.println(s+" - Prostoe");
+        }
+        else {
+            System.out.println("Ne Prostoe");
+        }
+	// write your code here
+    }
+}
