@@ -1,0 +1,42 @@
+package com.company;
+
+import java.util.Arrays;
+
+public class Main {
+
+    public static void main(String[] args) {
+        int arrij[][] = new int[2][2];
+
+        arrij[0][0] = 1;
+        arrij[0][1] = 2;
+        arrij[1][0] = 2;
+        arrij[1][1] = 1;
+
+        for (int i = 0; i < arrij.length; i++) {
+            for (int j = 0; j < arrij[i].length; j++) {
+                System.out.print(arrij[i][j] + "\t");
+            }
+            System.out.println();
+        }
+        System.out.println();
+        int arrmn[][] = new int[2][2];
+
+        arrmn[0][0] = 1;
+        arrmn[0][1] = 2;
+        arrmn[1][0] = 2;
+        arrmn[1][1] = 1;
+
+        for (int m = 0; m < arrmn.length; m++) {
+            for (int n = 0; n < arrmn[m].length; n++) {
+                System.out.print(arrmn[m][n] + "\t");
+            }
+            System.out.println();
+        }
+        boolean x = true;
+        if (x = Arrays.deepEquals(arrij, arrmn)) {
+            System.out.println("Массивы идентичны, все соответсвующие элементы равны");
+        } else System.out.println("Массивы не идентичны");
+
+        // write your code here
+    }
+}
