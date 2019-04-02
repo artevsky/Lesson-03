@@ -4,27 +4,52 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int mas[] = new int[5];
+        int array[] = {0, 2, 3, 9};
+        //int array[] = {0, 2, 3, 9, 1, 1, 1, 1, 0, 1, 2, 9};
+        //int array[] = {0, 2, 9, 8, 0, 4, 9};
+//        int array[] = new int[5];
+//
+//        Scanner in = new Scanner(System.in);
+//
+//        for (int i = 0; i < array.length; i++) {
+//            System.out.println("Введите элемент массива номер " + i + " из " + (array.length - 1));
+//            array[i] = in.nextInt();
+//        }
+        int min = array[0];
+        int max = array[0];
+        int indexMin = 0;
+        int indexMax = 0;
 
-        Scanner in = new Scanner(System.in);
-
-        for (int i = 0; i < 5; i++) {
-            System.out.println("Введите элемент массива номер " + i + " из " + (mas.length - 1));
-            mas[i] = in.nextInt();
-        }
-        int min, max;
-        min = max = mas[0];
-
-        for (int i = 0; i < 5; i++) {
-            if (mas[i] < min) {
-                min = mas[i];
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < min) {
+                min = array[i];
+                indexMin = i;
             }
-            if (mas[i] > max) {
-                max = mas[i];
+            if (array[i] > max) {
+                max = array[i];
+                indexMax = i;
             }
         }
+
+        int sumMM = 0;
+        for (int i = Math.min(indexMin, indexMax) + 1; i < Math.max(indexMin, indexMax); ++i) {
+            sumMM += array[i];
+        }
+
         System.out.println("Минимальный элемент массива   = " + min);
         System.out.println("Максимальный элемент массива = " + max);
+        System.out.println("Сумма элементов между максимальным и минимальным значениями: " + sumMM);
     }
 }
-// write your code here
+//        int sum = 0;
+//        if(min<max){
+//            for (int i = min + 1; i < array.length; i++) {
+//                sum += array[i];
+//            }
+//        }
+//
+//        System.out.println("Сумма = " + sum);
+
+//&&(j!=min)&&(j!=max)
+
+
