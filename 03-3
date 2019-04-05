@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int array[] = {0, 2, 3, 9};
+        //int array[] = {0, 2, 3, 9};
         //int array[] = {0, 2, 3, 9, 1, 1, 1, 1, 0, 1, 2, 9};
-        //int array[] = {0, 2, 9, 8, 0, 4, 9};
+        int array[] = {0, 2, 9, 8, 0, 4, 9};
 //        int array[] = new int[5];
 //
 //        Scanner in = new Scanner(System.in);
@@ -17,22 +17,23 @@ public class Main {
 //        }
         int min = array[0];
         int max = array[0];
-        int indexMin = 0;
-        int indexMax = 0;
+//        int indexMin = 0;
+//        int indexMax = 0;
+        int sumMM = 0;
 
         for (int i = 0; i < array.length; i++) {
             if (array[i] < min) {
                 min = array[i];
-                indexMin = i;
+//                indexMin = i;
             }
             if (array[i] > max) {
                 max = array[i];
-                indexMax = i;
+//                indexMax = i;
             }
         }
-
-        int sumMM = 0;
-        for (int i = Math.min(indexMin, indexMax) + 1; i < Math.max(indexMin, indexMax); ++i) {
+        for (int i = min; i < array.length; i++) {
+            if ((array[i] == min) || (array[i] == max))
+                continue;
             sumMM += array[i];
         }
 
@@ -41,15 +42,3 @@ public class Main {
         System.out.println("Сумма элементов между максимальным и минимальным значениями: " + sumMM);
     }
 }
-//        int sum = 0;
-//        if(min<max){
-//            for (int i = min + 1; i < array.length; i++) {
-//                sum += array[i];
-//            }
-//        }
-//
-//        System.out.println("Сумма = " + sum);
-
-//&&(j!=min)&&(j!=max)
-
-
